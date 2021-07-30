@@ -1,11 +1,8 @@
 let handle=prompt("Enter you codeforces handle");
-function start(){
-    fn1();
-}
+fn1();
 function fn1(){
     fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=1`)
         .then(res=>{
-            console.log(res,res.json())
             return res.json();
             })
         .then(data=>{
