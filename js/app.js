@@ -1,5 +1,4 @@
 let handle=prompt("Enter you codeforces handle");
-fn1();
 function fn1(){
     fetch(`https://codeforces.com/api/user.status?handle=${handle}&from=1&count=1`)
         .then(res=>{
@@ -15,7 +14,7 @@ function fn1(){
                 }
                 else{
                     console.log(data.result[0].verdict);
-                    alert(data.result[0].verdict);
+                    alert(`Last Submission: ${data.result[0].verdict}`);
                 }
             }
         })
